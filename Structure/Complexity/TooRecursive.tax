@@ -1,0 +1,5 @@
+TooRecursive: too much recursion
+
+We have talked about [smell]1SidedRecursion[/smell] before but other kinds of
+recursion can also be confusing if recursion and mutual recursion is too
+prevalent.

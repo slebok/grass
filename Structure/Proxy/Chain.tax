@@ -1,0 +1,18 @@
+Chain: right hand side is a nonterminal
+
+Chain rules are a well-known smell in grammar engineering
+[cite]IFM-2009-LammelZ[/cite][cite]SCAM-J-2009-LammelZ11[/cite]: it happens
+when a nonterminal is defined with only one production rule which has exactly
+one nonterminal as its right hand side. The ``inner'' nonterminal acts like a
+middle man and does not play a significant rule in structural commitments of
+the grammar. In Fowler's words, ``after a while it’s time to cut out the
+middle man and talk to the object that really knows what’s going on''
+[cite]Refactoring[/cite].
+
+Related: LC2|Lazy Class
+Related: EAC|Extraneous Adjacent Connector
+Related: MC|Message Chains
+Related: MM|Middle Man
+Related: SMM|Middle Man
+Related: SLCC|Long Calculation Chain
+Related: TML|Too Many Layers

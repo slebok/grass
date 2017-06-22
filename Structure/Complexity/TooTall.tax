@@ -1,0 +1,14 @@
+TooTall: the height (distance from the root) is too big
+
+For each nonterminal we can calculate its minimal distance from the starting
+symbol, as the minimal number of productions in a full derivation that
+contains it. The maximum of all these distances for all nonterminals, is what
+is referred to as the height of the grammar. Out of two grammars of comparable
+size with respect to number of terminals, nonterminals and production rules, a
+taller grammar will be more complex to understand---thus, it is advisable to
+refactor a grammar that has grown too tall.
+
+% (TODO link to who defined height)
+
+Related: DH|Deep Hierarchy
+Related: TDIH|Too Deep Inheritance Hierarchy

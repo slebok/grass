@@ -1,0 +1,11 @@
+Multitool: a nonterminal that represents two or more concepts
+
+This smells takes place when a nonterminal violates the single responsibility
+principle, and represents several (hopefully related) abstractions.
+
+Related: GC|God Class
+Related: PGC|God Class
+Related: SAK|Swiss Army Knife
+Related: MAC|Multifaceted Abstraction
+Related: PBB|Brother of the Bride
+Related: MA2|Multifaceted Abstraction

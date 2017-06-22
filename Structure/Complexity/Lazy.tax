@@ -1,0 +1,6 @@
+Lazy: one module that does not do much
+
+The opposite of [smell]Greedy[/smell], a Lazy module is the one that does not
+do much: it is empty or contains just one nonterminal.
+
+Related: LC2|Lazy Class

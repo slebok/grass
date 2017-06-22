@@ -1,0 +1,8 @@
+TooModular: too many modules
+
+On the other side of the spectrum from [smell]TooLonely[/smell], a grammar can
+be too modular and split into so many modules that each of them is
+meaninglessly tiny, yet their combination is unbearably unintelligible.
+
+Related: TMS|Too Many Subsystems
+Related: TSP|Too Small Packages/Subsystems

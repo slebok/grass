@@ -1,0 +1,17 @@
+Mythic: an alternative that is never exercised in the codebase
+
+Formal language theory defines a language [emph]extensionally[/emph], as a set
+of all possible programs written in it. A grammar is an
+[emph]intensional[/emph] definition, which is nicer because it is a finite
+specification of an infinitely large entity, but it also makes it harder to
+see some relations between that and the instances of the language. In
+particular, the actual codebase of the software language, if available and
+comprehensive enough, can serve as a good approximation of the language
+features used by programmers. If a grammar contains a feature that is never
+exercised by any program in the actual codebase, it is a [smell]Mythic[/smell]
+feature that, for instance, does not have to be supported for a software
+analysis or migration tool to be useful and applicable.
+
+Related: UH|Unnecessary Hierarchy
+Related: SG|Speculative Generality
+Related: SH|Speculative Hierarchy

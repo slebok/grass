@@ -1,0 +1,8 @@
+TooNested: groups are too deeply nested
+
+Subsequences (often called [emph]groups[/emph]) may be used to avoid
+[smell]Misformat[/smell], but really hamper the understanding of the system if
+used excessively. This smell often correlates with production rules being
+[smell]TooRamose[/smell].
+
+Related: AFC|Feature Concentration

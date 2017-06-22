@@ -1,0 +1,12 @@
+Complexity: metric-based smells
+
+* TooWide
+* TooRamose
+* TooRecursive
+* TooNested
+* TooTall
+* Lonely
+* TooModular
+* Greedy
+* Lazy
+* TooCoupled

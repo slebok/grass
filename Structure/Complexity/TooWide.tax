@@ -1,0 +1,30 @@
+TooWide: the width (right hand side length) is too big
+
+This smell is designed to recognise production rules which are too wide---that
+is, their right hand side is too long. There could be at least three different
+ways to define what is ``too long'':
+
+[list]
+[item]The number of consequent terminals is too high, which is harmful because
+long streaks of consequent terminals obscure the syntactic structure.[/item]
+[item]The number of nonterminals is too high, which is harmful because it
+requires knowledge about referenced nonterminals to debug a grammar (so we
+should not count preterminals).[/item]
+[item]The number of metasymbols (stars, optionals, crosses, separator lists
+and other combinators) is too high, which is harmful because the importance of
+knowing the notation is stressed when a grammar engineer needs to understand
+such a production rule.[/item]
+[/list]
+
+The last option also correlates to the omnipresent notion of cyclomatic
+complexity (covered by the [smell]TooRamose[/smell] smell), because many
+metasymbols imply branching that is done during parsing or analysing an
+instance.
+
+Related: SATL|Subsystem-API Too Large
+Related: LM|Long Method
+Related: LPL|Long Parameter List
+Related: CE|Complex Expression
+Related: LS|Long Statement
+Related: SMO|Multiple Operations
+Related: SMR|Multiple References

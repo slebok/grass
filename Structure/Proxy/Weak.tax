@@ -1,0 +1,14 @@
+Weak: a nonterminal does not form a proper abstraction
+
+When the right hand side of a nonterminal is formed from several symbols that
+happen to occur one after another, without forming a proper abstraction, this
+can hinder grammar's understanding. The terminology is borrowed from
+[cite]McCord1985[/cite] which distinguished [emph]strong[/emph] nonterminals
+(used during parsing and present in the resulting tree) from [emph]weak[/emph]
+ones (used during parsing but flattened into single nodes in the tree).
+
+Related: IA2|Incomplete Abstraction
+Related: UA|Unnecessary Abstraction
+Related: UAC|Unnecessary Abstraction
+Related: DCA|Compound Attribute
+Related: DMA|Multicolumn Attribute

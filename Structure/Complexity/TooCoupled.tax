@@ -1,0 +1,7 @@
+TooCoupled: low cohesion and/or high coupling
+
+Modularity can not only be broken or insufficient, it can also be weakened. A
+grammar split into several modules that have high coupling among them and low
+cohesion inside each of them, had better stayed as [smell]Lonely[/smell].
+
+Related: CWM|Weakened Modularity

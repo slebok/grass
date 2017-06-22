@@ -1,0 +1,26 @@
+Soulmates: nonterminals or modules are always changed together
+
+If enough information is available about the evolution of the grammar (e.g.,
+in a form of a versioned repository or a piece of documentation describing all
+changes), one can notice two nonterminals having a so-called [emph]co-change
+relationship[/emph] when each revision that changes one, also changes the
+other. The smell occurs when this co-change relationship in the revision log
+does not correspond to explicit dependencies between modules and nonterminals.
+
+In the absence of change history, a thought experiment may serve the same
+purpose: if a nonterminal [code]X[/code] is to change in a particular way,
+what other nonterminals will have to be inevitably co-updated to preserve the
+consistency of the grammar? All of those, if any, are its
+[smell]Soulmates[/smell]. It deserves mentioning that the programming
+counterpart of this smell, called ``Feature Envy'', is often detectable
+automatically through static code analysis. The Soulmates smell, however, is
+only detectable with revision mining or conceptual analysis.
+
+Related: CROSSM|Implicit Cross-Module Dependency
+Related: PIH|Parallel Inheritance Hierarchies
+Related: SS|Shotgun Surgery
+Related: SSS|Shotgun Surgery
+Related: FE|Feature Envy
+Related: SFE|Feature Envy
+Related: II|Inappropriate Intimacy
+Related: SII|Inappropriate Intimacy

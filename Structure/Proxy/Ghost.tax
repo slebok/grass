@@ -1,0 +1,7 @@
+Ghost: a subexpression that should have been a nonterminal
+
+If an expression, especially a [smell]Common[/smell] subexpression, could have
+formed a proper abstraction, but is not made into a separate nonterminal, we
+speak of it as a Ghost.
+
+Related: ME|Missing Encapsulation

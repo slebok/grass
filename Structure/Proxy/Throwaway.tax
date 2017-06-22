@@ -1,0 +1,11 @@
+Throwaway: a nonterminal used only once
+
+A nonterminal that is used only once, may be useful to tame the length of
+production rules (see [smell]TooWide[/smell]), and may occasionally convey a
+useful abstraction with its name, but beyond those circumstances it is a smell
+and should be a candidate for refactoring.
+
+Related: LIH|List-like Inheritance Hierarchy
+Related: POL|Poltergeist
+Related: IA|Imperative Abstraction
+Related: TDG|Tree-like Dependency Graph

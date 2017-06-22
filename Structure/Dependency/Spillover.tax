@@ -1,0 +1,11 @@
+Spillover: a nonterminal that is too linked to the adjacent symbols
+
+Spillover happens when some symbols that should have been a part of the
+nonterminal definition, are not included in its right hand side, and appended
+every time to its use. This creates a co-change relationship between the
+nonterminal and the context of its use. If every time a definition of a
+nonterminal is changed in a particular way, all occurrences of the same
+nonterminal needs to be updated, this smell is detected.
+
+Related: UINT|Unstable Interface
+Related: ILC|Incomplete Library Class
