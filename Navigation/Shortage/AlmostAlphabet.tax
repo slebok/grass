@@ -1,0 +1,9 @@
+AlmostAlphabet: seemingly incomplete collections
+
+The completeness of some character classes and terminal choices can be
+predicted, and compared to the actual value given by the grammar. For example,
+if a character class includes all Latin letters except one or all whitespace
+characters except [verb]\r[/verb], it may be an error. Similarly, if a
+preterminal is defined as a choice of all other alphanumeric terminals in the
+grammar (common for keyword definitions), then not a single one of them should
+be skipped.

@@ -1,0 +1,12 @@
+Dead: nonterminal defined, but not referenced
+
+All top (unused) nonterminals that were identified as not being the starting
+symbol(s) of the grammar, represent unreachable fragments. The programming
+counterpart of this smell is dead code and its variants.
+
+Related: UP|Unused Packages
+Related: LF|Lava Flow
+Related: OC|Obsolete Classes
+Related: UA2|Unutilized Abstraction
+Related: EDLS|Dead Local Store
+Related: DF|Dead Fields

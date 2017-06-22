@@ -1,0 +1,10 @@
+Debt: incompletenesses covered up by todo/fixme comments
+
+Similarly to [smell]Chant[/smell] that covers up imperfect fragments with
+comments in natural language, there could be pieces missing entirely from the
+grammar and replaced with comments. If the comments admit clearly what is
+missing, use searchable tags like ``TODO'' or ``FIXME'' and are intended to
+use as a backlog, the current practice is to refer to them as ``self-admitted
+technical debt'' [cite]ICSME-2014-PotdarS[/cite].
+
+Related: IT|Incomplete Tasks

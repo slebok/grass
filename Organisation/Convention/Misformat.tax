@@ -1,13 +1,14 @@
 Misformat: misleading formatting
 
 There are many formatting mistakes one can make when creating a grammar
-without proper tool support [cite]LDTA-2012-Zaytsev[/cite][cite]SCAM-J-2009-LammelZ11[/cite]. Mostly they
-revolve around mistypings, misspellings, misalignments, etc, and result in
-actual incorrect constructs in extracted grammars. However, there can be
-other, more subtle smells within formatting of a grammar, that do not change
-the way the machine processes it, but do change the way a tired grammarware
-engineer may understand it. The most canonic example of misleading formatting
-would be (mind the colon, not a semicolon, following [code]ghi[/code]):
+without proper tool support [cite]LDTA-2012-Zaytsev[/cite]
+[cite]SCAM-J-2009-LammelZ11[/cite]. Mostly they revolve around mistypings,
+misspellings, misalignments, etc, and result in actual incorrect constructs in
+extracted grammars. However, there can be other, more subtle smells within
+formatting of a grammar, that do not change the way the machine processes it,
+but do change the way a tired grammarware engineer may understand it. The most
+canonic example of misleading formatting would be (mind the colon, not a
+semicolon, following [code]ghi[/code]):
 
 [example]
         abc :
