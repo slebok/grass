@@ -1,2 +1,8 @@
 Parsing: parsing techniques related smells
 
+* Factoring
+* 1SidedRecursion
+* Superset
+* Shotgun
+* NoDefault
+* Action
