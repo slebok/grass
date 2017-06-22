@@ -1,0 +1,12 @@
+Ouroboros: a circular dependency among modules
+
+If nonterminals are mutually, say, left recursive, and have no non-recursive
+alternatives, they are useless and cannot express a proper syntactic
+commitment. However, a similar issue may be encountered on the level of
+modules, and it is harder to detect for a human because modular grammars are
+already stretching comprehension capabilities of a grammar engineer. Such
+circular dependencies are fairly easy to detect automatically with a tool.
+
+Related: DCP|Dependency Cycles between Packages/Subsystems
+Related: CM|Cyclically-dependent Modularization
+Related: SCDG|Static Cycles in Dependency Graphs
