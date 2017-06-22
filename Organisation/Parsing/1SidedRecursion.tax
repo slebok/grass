@@ -1,0 +1,27 @@
+1SidedRecursion: left or right recursive rules
+
+It is well-known that left-recursive definitions are deadly for by-the-book
+top-down parsing technologies [dyol]PT-GJ[/dyol], since they create an infinite loop
+and cause the parser to crash from stack overflow. There are many approaches
+to solve the problem by grammar refactoring or parser tweaking, available from
+late 1960s, but most of them, if not all, increase the size and complexity of
+the grammar significantly. Hence, we can imagine some scenarios when left
+recursion should be recognised as a smell to be reported to the grammar
+engineer who will fix the issue manually. This is an
+example [zoo]Vadim Zaytsev|#toy_fl_concrete_txl_extracted|FL.Txl|extracted[/zoo]:
+
+[example]
+expression ::= expression op expression
+             | id expression+
+[/example]
+
+It must be noted here that indirect recursion (when [code]A[/code]'s right
+hand side starts with [code]B[/code] whose right hand side starts with
+[code]A[/code]) is just as deadly for top-down parsing as direct recursion.
+
+Right recursion in general is less harmful, but it does lead to bottom-up
+parsers being slower than otherwise [dyol]PT-GJ[/dyol], so it should still be
+avoided whenever possible.
+
+Related: CH|Cyclic Hierarchy
+Related: ESA|Self Assignment

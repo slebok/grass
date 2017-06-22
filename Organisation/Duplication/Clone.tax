@@ -1,0 +1,12 @@
+Clone: same right hand side occurs twice or more
+
+Nonterminals that have exactly the same definitions, are only cluttering the
+grammar, and can be painlessly united. In clone management research, these are
+called ``type 1 clones'', we will revisit this classification later when
+defining [smell]Lookalike[/smell].
+
+Related: DC2|Duplicate Code
+Related: RW|Reinvent the Wheel
+Related: CPP|Cut and Paste Programming
+Related: UH2|Unfactored Hierarchy
+Related: DE2|Duplicate Entity

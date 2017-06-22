@@ -1,0 +1,14 @@
+Foldable: nonterminal's right hand side is not unique
+
+This smell occurs when the clone is formed not between full definitions of two
+nonterminals, but when the right hand side of one nonterminal occurs as a
+subexpression in the right hand side of another nonterminal. Conceptually they
+are still clones and suffer from all known consequences of coupled evolution,
+but the solution is different: instead of merging the nonterminals, the
+subexpression needs to be folded into a nonterminal that defines it.
+
+Related: SPF|Scattered Parasitic Functionality
+Related: SAB|Subsystem-API Bypassed
+Related: GODY|The Grand Old Duke of York
+Related: BH|Broken Hierarchy
+Related: СBH|Broken Hierarchy

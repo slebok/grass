@@ -1,0 +1,13 @@
+Combo: double modifier creates an ambiguity
+
+Grammar combinators (metasymbols of arity 1 and up) such as the Kleene star
+and cross, or an optional, can be combined in an improper way. For example, a
+grammar engineer who defines [code]A ::= B?;[/code] and [code]B ::=
+C?;[/code], may mean well, but creates a confusing contract if [code]A[/code]
+is used to bind a textual structure with a tree structure: it is ambiguous
+what an empty string corresponds to---an empty node [code]A[/code] or a node
+[code]A[/code] containing an empty node [code]B[/code]. Some of these issues
+may be harder to detect due to indirection, but they are all automatically
+fixable.
+
+Related: EUCF|Useless Control Flow

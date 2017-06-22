@@ -1,0 +1,20 @@
+Lookalike: near-clones
+
+In mainstream clone detection research, people distinguish between clones of
+different types: exact clones (``type 1'') with identical literal duplicates;
+parametrised clones (``type 2'') with variations in identifier names,
+literals, even variable types; near miss clones (``type 3'') where statements
+are allowed to be changed, added or removed up to some extent; semantic clones
+(``type 4'') as the same computation with a different syntax and possibly even
+different algorithms; structural clones---higher level similarities,
+conceptually bottom-up-detected implementation patterns; and artefact
+clones---function clones and file clones [cite]Roy2009[/cite]. For grammars,
+there is no developed theory of clone management, so the questions are open on
+what constitutes a proper clone, what classes of clones are there, which ones
+are useful to detect and which to refactor, etc. It makes sense to assume that
+clone detection in grammars will bear some similarity to contextual clones
+[cite]Martin2011[/cite] that worked for another DSL with relatively few
+constructs, where clones were detected based on the context of clone candidate
+fragments, and not on their structure per se.
+
+Related: RW|Reinvent the Wheel

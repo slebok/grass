@@ -1,0 +1,51 @@
+Misnomer: problems with naming policies
+
+There are a lot of potential problems with names used within a grammar, mostly
+concerning nonterminal names and labels. Many grammar notations do not support
+labels (decorative names for production rules or right hand side
+subexpressions) [cite]SAC-2012-Zaytsev[/cite], but realistic metalanguages
+tend to have them in some form. Nonterminal names, on the other hand, are
+essential---they are optional only in notations for regular expressions, and
+present in all grammar notations of the context-free kind and beyond.
+
+One can blame names to be [emph]uncommunicative[/emph], like the names from
+the last example: [code]abc[/code] or [code]pqr[/code] are much worse for the
+readability and maintainability of the grammar than [verb]if_statement[/verb],
+[code]CompilationUnit[/code] or [code]DIGIT[/code], similarly to how this is a
+problem in programming in general [cite]ICPC-2017-BeniaminiGOF[/cite]. One can
+also investigate whether naming [emph]policies[/emph] are present and how they
+are respected. For instance, if all nonterminals are camelcased, but one is
+lowercase with an underscore separator, it was probably a misspelling---cases
+like this were reported in a MediaWiki grammar which was created by several
+unrelated grammar engineers [cite]MediaWiki2011[/cite]. If can also be the
+case that the naming policy carries semantic meaning: typically lexical
+nonterminals and/or preterminals are named in uppercase, to distinguish them
+visually when they are used next to others like this:
+
+[example]
+ if_stmt ::= IF condition THEN expression ENDIF;
+[/example]
+
+Sometimes naming policies represent namescoping, which is considered a bad
+smell in OOP but is much less so in grammars because all names are global (at
+least up to a module level, if we have modules). An example:
+
+[example]
+    VarDef ::= VarName DefKeyword VarType;
+    ConstDef ::= ConstName DefKeyword ConstType;
+[/example]
+
+% inconsistent naming of alternatives (or not naming)
+
+Finally, names can be [emph]misleading[/emph] and contain words that contradict the
+definition of the named entity. For example:
+
+[example]
+WhileStatement ::= "while" Condition Block
+      | "repeat" Block "until" Condition ;
+[/example]
+
+Related: PNCN|Packages Not Clearly Named
+Related: DA|Duplicate Abstraction
+Related: INC|Inconsistent Naming Convention
+Related: IQU|Improper Quote Usage

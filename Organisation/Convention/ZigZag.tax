@@ -1,0 +1,19 @@
+ZigZag: mixing horizontal and vertical styles
+
+ZigZag was a previously identified micropattern of a nonterminal defined in a
+style that mixes horizontal production rules (the ones with a top-level
+choice) with vertical production rules (with several rules per nonterminal)
+[cite]SLE-2013-Zaytsev[/cite]. In this fragment [code]aaa[/code] is
+horizontal, [code]ddd[/code] is vertical and [code]ggg[/code] is zigzag:
+
+[example]
+    aaa ::= bbb | ccc;
+    ddd ::= eee;              ddd ::= fff;
+    ggg ::= hhh | jjj;        ggg ::= mmm;
+[/example]
+
+When it comes to smells, we have at least two ways to define and detect
+ZigZags: the [emph]local[/emph] one within a nonterminal (equal to the micropattern)
+and the [emph]global[/emph] within a grammar. The latter would mean that some
+nonterminals are defined horizontally while others are defined vertically,
+which may not be technically detrimental, but is still sloppy.

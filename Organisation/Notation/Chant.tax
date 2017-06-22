@@ -1,0 +1,13 @@
+Chant: comments cover up bad code
+
+During grammar recovery projects in the past we were occasionally stumbling
+across nonterminals that were ``defined'' in natural language instead of the
+actual grammar notation: ``defined similarly to...'', ``all Unicode characters
+of class...'', ``any of the following'', etc. These are drastic examples of
+this smell, since they make the grammar completely useless for automatic
+machine consumption. However, having improper constructions in one's grammar
+that are covered up by an extensive comment explaining why it is not that that
+bad, is still an instance of this smell.
+
+Related: CO|Comments
+Related: PDD|The Devil of Details

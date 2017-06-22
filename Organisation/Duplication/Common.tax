@@ -1,0 +1,17 @@
+Common: common subexpressions
+
+One step further, we may observe clones between two or more subexpressions
+found in different places in the grammar. The detection pattern is almost the
+same as with [smell]Foldable[/smell], but the solution must involve creating a
+new nonterminal and then folding it ([emph]extract[/emph] in the terminology
+of [cite]IFM-2009-LammelZ[/cite][cite]SCAM-J-2009-LammelZ11[/cite]). Since
+creating a new nonterminal implies inventing a new name for it, and only
+suboptimal heuristics are available, the removal of this smell cannot be
+properly fully automated.
+
+% TODO: DC is when data is used together
+Related: DC|Data Clumps
+Related: RW|Reinvent the Wheel
+Related: DB|Duplicate Block
+Related: SDF|Duplicated Formulas
+Related: ACE|Connector Envy

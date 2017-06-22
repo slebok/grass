@@ -1,0 +1,23 @@
+Underuse: inferior substitutes are used instead of an available feature
+
+The original BNF used for early ALGOL versions, did not yet borrow Kleene star
+and Kleene cross from the regular expressions, and early parser specification
+notations were just as limited. Grammars written with those notations in mind
+(not necessarily for using them!), suffer from so-called
+``yaccification'' [cite]FME-2001-Lammel[/cite][cite]ICSM-2001-JongeM[/cite],
+when all repetitions are written out explicitly as additional left-recursive
+nonterminals. This pattern is well-known to be harmful since it reduces
+grammar's both readability (yaccification is basically an encoding move, not a
+modelling one) and portability (a left-recursive grammar is often useless or
+suboptimal for top-down parsing).
+
+There can be other similar patterns falling under the same smell description:
+for instance, separator lists are concisely and efficiently handled by many
+grammar notations, and if one of those is used, should not be written out with
+group repetition or recursion.
+
+% imperfect albeit working constructs (examples!)
+
+% layered grammars
+
+% recursion instead of optional

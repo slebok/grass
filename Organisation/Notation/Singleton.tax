@@ -1,0 +1,10 @@
+Singleton: trivial choice, sequence or conjunction
+
+The designers of grammar notations, as all DSL designers, try to make them fit
+the domain, but never achieve absolute perfection. In particular, multiary
+symbols with arity of 2 and up, are commonly expressed in such a way that
+allows their use on an empty or trivial list of arguments. Single-element
+sequences, disjunctions and conjunctions like this are easy to detect and
+remove by algebraic rewriting.
+
+Related: IC|Incomplete Conditional

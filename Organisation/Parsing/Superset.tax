@@ -1,0 +1,9 @@
+Superset: parser spec is too relaxed
+
+Some grammars represent a superset of the intended language. This may become a
+problem if the parser based on the grammar is to be used as a correctness
+oracle, since in this role it is inadequate. Overly relaxed grammars are
+routinely used in other scenarios such as software analytics and
+inter-language translation, and can be very useful there.
+
+Related: OG|Overgeneralization

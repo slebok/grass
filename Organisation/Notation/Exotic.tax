@@ -1,0 +1,11 @@
+Exotic: too idiosyncratic notational features decrease portability
+
+This smell is in contradiction with [smell]Underuse[/smell], and states that
+using notational features that are uncommon, obscure or overly exotic, should
+be limited. Excessive use of features idiosyncratic for one particular
+notation, will result in a vendor lock-in. For example, if a notation allows
+context handling (pushing the grammar outside the comfort zone of CFGs), using
+it is only fully justified when the result is too cumbersome otherwise.
+
+Related: VLI|Vendor Lock−In
+Related: GH|Golden Hammer

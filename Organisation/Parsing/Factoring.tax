@@ -1,0 +1,28 @@
+Factoring: improper factoring or distribution
+
+In classic by-the-book [dyol]PT-GJ[/dyol] non-memoising parsing, if alternative
+production rules from the same nonterminal start from the same symbols, these
+would have to be reparsed in each of the branches. As a real
+example [zoo]Doug Cooper, Scott Moore|#pascal_pascal_cooper-moore_fetched|Pascal grammar in Yacc format|fetched[/zoo]:
+
+[example]
+open_if_statement
+ : IF boolean_expression THEN statement
+ | IF boolean_expression THEN closed_statement
+                         ELSE open_statement;
+[/example]
+
+Interestingly, this example is a false positive: factoring the first three
+symbols into a separate nonterminal will clutter the grammar without bringing
+any noticeable benefits (and will introduce the [smell]Weak[/smell] smell). In
+other cases, this smell has been avoided/removed [zoo]The Dart Team|#dart_latex_v01.0_extracted|Dart Programming Language Specification|extracted[/zoo]:
+
+[example]
+ifStatement ::= "if" "(" expression ")" statement
+               ("else" statement)?
+[/example]
+
+% TODO: also when distinction is made deeper than conceptually should be
+
+Related: MH|Missing Hierarchy
+Related: ERC|Repeated Conditionals

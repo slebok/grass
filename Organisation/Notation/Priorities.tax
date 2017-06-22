@@ -1,0 +1,92 @@
+Priorities: not present or circular
+
+A typical [emph]layered[/emph] grammar [cite]IFM-2009-LammelZ[/cite] treats
+highly recursive language constructs with sophisticated priorities by explicitly encoding them in a long streak of nonterminals[zoo]ISO/IEC 14882:1998(E)|#cpp_cpp98_iso-14882-1998_extracted|Programming languages — C++|extracted|for spacial considerations some nonterminal names have been shortened and some alternatives removed[/zoo]:
+
+[example small]
+expression ::=
+    assignment-expr
+    expression "," assignment-expr
+assignment-expr ::=
+    conditional-expr
+    logical-or-expr assignment-operator assignment-expr
+    throw-expr
+conditional-expr ::=
+    logical-or-expr
+    logical-or-expr "?" expression ":" assignment-expr
+logical-or-expr ::=
+    logical-and-expr
+    logical-or-expr "||" logical-and-expr
+logical-and-expr ::=
+    inclusive-or-expr
+    logical-and-expr "&&" inclusive-or-expr
+inclusive-or-expr ::=
+    exclusive-or-expr
+    inclusive-or-expr "|" exclusive-or-expr
+exclusive-or-expr ::=
+    and-expr
+    exclusive-or-expr "^" and-expr
+and-expr ::=
+    equality-expr
+    and-expr "&" equality-expr
+equality-expr ::=
+    relational-expr
+    equality-expr "==" relational-expr
+    equality-expr "!=" relational-expr
+relational-expr ::=
+    shift-expr
+    relational-expr "<" shift-expr
+    relational-expr ">" shift-expr
+shift-expr ::=
+    additive-expr
+    shift-expr "<<" additive-expr
+    shift-expr ">>" additive-expr
+additive-expr ::=
+    multiplicative-expr
+    additive-expr "+" multiplicative-expr
+    additive-expr "-" multiplicative-expr
+multiplicative-expr ::=
+    pm-expr
+    multiplicative-expr "*" pm-expr
+    multiplicative-expr "/" pm-expr
+    multiplicative-expr "%" pm-expr
+pm-expr ::=
+    cast-expr
+    pm-expr ".*" cast-expr
+    pm-expr "->*" cast-expr
+cast-expr ::=
+    unary-expr
+    "(" type-id ")" cast-expr
+unary-expr ::=
+    postfix-expr
+    "++" cast-expr
+    "--" cast-expr
+    unary-operator cast-expr
+    "sizeof" unary-expr
+    "sizeof" "(" type-id ")"
+    new-expr
+    delete-expr
+postfix-expr ::=
+    primary-expr
+    postfix-expr "[" expression "]"
+    postfix-expr "(" expression-list? ")"
+    postfix-expr "++"
+    postfix-expr "--"
+primary-expr ::=
+    literal
+    "this"
+    "(" expression ")"
+    id-expr
+[/example]
+
+This example belongs to an obviously complicated programming language (C++),
+but the abundance of extra nonterminals increases this complexity. A cleaner
+way would have been to merge all definitions into one nonterminal (or a few
+conceptually grouped ones) and to define priorities between them. Priorities
+can be specified in a separate notation or by using ordered choices. Once
+these priorities are defined, there can be other variations of this smell in
+their specifications as such: circular dependencies, missing elements, etc.
+
+Related: CMC|Cross-module Cycle
+Related: NL|No Layers
+Related: SS1|Stovepipe System

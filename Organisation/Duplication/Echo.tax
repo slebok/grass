@@ -1,0 +1,10 @@
+Echo: same rule occurs twice or more
+
+A nonterminal definition is echoed if it is included in the grammar several
+times, each of which is identical to any other. Echoes were found in the Java
+Language Specification as a result of manual (not tool supported) creation of
+both the grammar and language documentation. They were merged in the grammar
+extractor---that is, during the phase of converting the original HTML document
+to the first version of the grammar [cite]p.348/SCAM-J-2009-LammelZ11[/cite].
+A similar error was observed earlier in the C\# standard
+[cite]Too-Sharp2005[/cite] and later in other languages [cite]Zoo2015[/cite].

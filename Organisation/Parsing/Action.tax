@@ -1,0 +1,22 @@
+Action: a code smell in a semantic action
+
+Many realistic language workbenches draw the line to prevent endless growing
+of their notations, and introduce a concept of a ``semantic action'', which is
+written like an annotation in the grammar and acts as a doorway to the
+mainstream language typical for the target platform
+[cite]SLE-2013-ErdwegSVBBCGHKLKMPPSSSVVVWW[/cite]. Obviously, since this
+action consists of code, the code can suffer from one of the numerous code
+smells.
+
+Related: ESRA|Switch Redundant Assignment
+Related: PCTH|Circuitous Treasure Hunt
+Related: PEDA|Excessive Dynamic Allocation
+Related: POLB|The One Lane Bridge
+Related: MG|Mystery Guest
+Related: RO|Resource Optimism
+Related: IPV|Invalid Property Value
+Related: II|Inappropriate Intimacy
+Related: TQ|Type Queries
+Related: UE|Unexploited Encapsulation
+Related: OILS|Obscure In-Line Setup
+Related: FD|Functional Decomposition
