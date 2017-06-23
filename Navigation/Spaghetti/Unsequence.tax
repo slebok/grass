@@ -9,7 +9,7 @@ experience optimal.
 
 In the past we have been using a grammar mutation called
 [emph]SubGrammar[/emph] to improve the readability of grammars extracted from
-language manuals [cite]SLEIR2014[/cite]. It would reorder the rules in the
+language manuals [gwnet]SLEIR2014[/gwnet]. It would reorder the rules in the
 following way: grab the starting symbol (usually the root of the grammar) and
 list all its production rules, and then go through all nonterminals used in
 their right hand sides one by one in the same sequence that they occur, add

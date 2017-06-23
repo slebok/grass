@@ -17,6 +17,6 @@ delegate-type ::= type-name ;
 Parsing something recognisable as [code]type-name[/code] will cause at least a
 triple ambiguity since it will be an acceptable [code]class-type[/code],
 [code]interface-type[/code] as well as [code]delegate-type[/code]
-[cite]Too-Sharp2005[/cite].
+[gwnet]Too-Sharp2005[/gwnet].
 
 Related: AAI|Ambiguous Interfaces

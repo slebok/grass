@@ -17,7 +17,7 @@ also investigate whether naming [emph]policies[/emph] are present and how they
 are respected. For instance, if all nonterminals are camelcased, but one is
 lowercase with an underscore separator, it was probably a misspelling---cases
 like this were reported in a MediaWiki grammar which was created by several
-unrelated grammar engineers [cite]MediaWiki2011[/cite]. If can also be the
+unrelated grammar engineers [gwnet]MediaWiki2011[/gwnet]. If can also be the
 case that the naming policy carries semantic meaning: typically lexical
 nonterminals and/or preterminals are named in uppercase, to distinguish them
 visually when they are used next to others like this:
